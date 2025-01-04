@@ -1,0 +1,23 @@
+INDEX VERSION 1.134+C:\Users\swain\Downloads\MockHibernate\.metadata\.plugins\org.eclipse.jdt.core
+291619801.index
+282029871.index
+31082226.index
+382418461.index
+4196100356.index
+2085741452.index
+1865797976.index
+2610107395.index
+3588748499.index
+3046383986.index
+1564922926.index
+1394578964.index
+477920999.index
+3582878991.index
+2594493904.index
+3994687238.index
+4250863653.index
+1071785774.index
+246538314.index
+4070634448.index
+3257453773.index
+2914013723.index

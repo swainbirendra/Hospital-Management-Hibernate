@@ -1,0 +1,66 @@
+package com;
+
+import java.util.Scanner;
+
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.Persistence;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("girish");
+		EntityManager em = emf.createEntityManager();
+		EntityTransaction et = em.getTransaction();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a id");
+		int n = sc.nextInt();
+
+		Doctor d1 = new Doctor();
+
+		d1.setName("Satish");
+		d1.setType("cadiology");
+
+		Patient p1 = new Patient();
+		p1.setName("birendra");
+		p1.setDisies("back pain");
+
+		Preciption pp1 = new Preciption();
+		pp1.setName("santosh hospital");
+		pp1.setDate("16-09-24");
+		pp1.setCost(1000);
+
+		et.begin();
+		em.persist(d1);
+		et.commit();
+
+//fetch data
+		while (n == 1) {
+			Doctor d = em.find(Doctor.class, 1);
+			if (d != null) {
+				d.getName();
+				d.getType();
+			}
+			Patient p = em.find(Patient.class, 1);
+			if (p != null) {
+				p.getName();
+				p.getDisies();
+				p.getAge();
+			}
+			Preciption pp = em.find(Preciption.class, 1);
+			if (pp != null) {
+				pp.getName();
+				pp.getDate();
+				pp.getCost();
+			}
+		}
+		while (n == 2) {
+			Doctor d = em.find(Doctor.class, 1);
+			if (d != null) {
+				d.setName("birendra");
+			}
+		}
+	}
+
+}
